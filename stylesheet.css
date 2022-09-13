@@ -1,0 +1,87 @@
+:root{
+  --glowcolor: blue;
+  --glowcolor2: red;
+}
+*{
+  border:1px solid black;
+}
+main, header{
+  background-color: #00000025;
+}
+html{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  max-width: 1200px;
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container{
+  width: 49%;
+  padding-top: 45%;
+  display:flex;
+  justify-content: center;
+  position: relative;
+}
+#button, #button2{
+  position:absolute;
+  top:50%;
+  transform: translate(0, -50%);
+  width:95%;
+  height:95%;
+  margin:0 auto;
+  border:8px outset white;
+  background-color:#333333;
+  border-radius: 20px;
+  font-size: 2.5em;
+  color: white;
+}
+#button:hover{
+  box-shadow: 0px 0px 30px var(--glowcolor);
+  text-shadow: 0 0 20px var(--glowcolor);
+}
+#button:active{
+  border:8px inset var(--glowcolor);
+  color: var(--glowcolor);
+}
+#button2:hover{
+  box-shadow: 0px 0px 30px var(--glowcolor2);
+  text-shadow: 0 0 20px var(--glowcolor2);
+}
+#button2:active{
+  border:8px inset var(--glowcolor2);
+  color: var(--glowcolor2);
+}
+#swipe{
+  width: 95%;
+  padding-top: 25%;
+  display:flex;
+  justify-content: center;
+  position: relative;
+}
+#bubble{
+  position:absolute;
+  top:50%;
+  transform: translate(0, -50%);
+  width:95%;
+  height:95%;
+  margin:0 auto;
+  border:8px outset white;
+  background-image: radial-gradient(circle at center, gray 0, black 100%);
+  border-radius: 50%;
+  font-size: 2.5em;
+  color: white;
+}
+#bubble:active{
+  background-image: radial-gradient(circle at center, black 0, gray 100%);
+  border: 8px inset white;
+  font-size:2em;
+}
